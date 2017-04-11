@@ -1,7 +1,7 @@
 package exemplos;
 
 public class TestaAnimais {
-	public static void main(String[] args) {
+	static public void main(String... args) {
 		Animal[] animais = new Animal[3];
 		animais[0] = new Sapo(2,1,"Pururu");
 		animais[1] = new Boi(10,400,"Jeff");
