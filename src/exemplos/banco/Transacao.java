@@ -1,7 +1,13 @@
 package exemplos.banco;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
+import java.util.Currency;
 import java.util.Date;
+import java.util.Locale;
+
+import sun.util.locale.provider.CurrencyNameProviderImpl;
 
 public class Transacao {
 	/*
@@ -9,7 +15,8 @@ public class Transacao {
 	 */
 	private Date dataHora;
 	// Classe usada para definir o formato de como a data podera ser mostrada.
-	private SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyy hh:mm:ss");
+	private SimpleDateFormat formatoData = new SimpleDateFormat("dd/MM/yyy hh:mm:ss");
+	private NumberFormat nf = NumberFormat.getCurrencyInstance();
 	private String descricao;
 	private double valor;	
 	/**
@@ -53,8 +60,8 @@ public class Transacao {
 	 * permitindo que a classe Transacao tenha seu proprio metodo toString.
 	 * @return String
 	 */
-	public String toString() {
-		return formato.format(this.getDataHora()) + "\t" + this.descricao + "\t\t" + this.getValor();
+	public String toString() {		
+		return formatoData.format(this.getDataHora()) + "\t" + this.descricao + "\n\t\t\t\t" + nf.format(this.getValor());
 	}
 
 }

@@ -1,5 +1,6 @@
 package exemplos.banco;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -42,18 +43,6 @@ public class Conta {
 		this.cliente = cliente;
 	}
 	/**
-	 * @return the transacoes
-	 */
-	public ArrayList<Transacao> getTransacoes() {
-		return transacoes;
-	}
-	/**
-	 * @param transacao the transacao to add
-	 */
-	public void addTransacao(Transacao transacao) {
-		this.transacoes.add(transacao);
-	}
-	/**
 	 * getSaldo - retorna o saldo baseado em todas as transacoes da conta
 	 * @return double
 	 */
@@ -69,9 +58,10 @@ public class Conta {
 	 */
 	public void mostrarExtrato() {
 		double saldo = 0.0;
+		NumberFormat nf = NumberFormat.getCurrencyInstance();
 		for(Transacao transacao:transacoes) {
 			saldo += transacao.getValor();
-			System.out.println(transacao.toString() + "(" + saldo + ")");
+			System.out.println(transacao.toString() + "\t(" + nf.format(saldo) + ")");
 		}
 	}
 	/**
@@ -86,6 +76,13 @@ public class Conta {
 		transacoes.add(transacao);
 	}
 	/**
+	 * deposito - realiza uma transacao na conta
+	 * @param valor
+	 */
+	private void depositoTransferencia(Transacao transacao) {
+		transacoes.add(transacao);
+	}
+	/**
 	 * saque - realiza uma transacao de saque na conta
 	 * @param valor
 	 */
@@ -96,7 +93,24 @@ public class Conta {
 		transacao.setValor(-valor);
 		transacoes.add(transacao);
 	}
-	
-		
+	/**
+	 * transferencia - realiza uma transferencia entre contas
+	 * @param contaDestino
+	 * @param valor
+	 */
+	public void transferencia(Conta contaDestino, double valor) {
+		// Registra transacao na conta origem
+		Transacao transacaoContaOrigem = new Transacao();
+		transacaoContaOrigem.setDataHora(new Date());
+		transacaoContaOrigem.setDescricao("Transferencia " + contaDestino.getNumeroConta());
+		transacaoContaOrigem.setValor(-valor);
+		transacoes.add(transacaoContaOrigem);
+		// Registra transacao na conta destino
+		Transacao transacaoContaDestino = new Transacao();
+		transacaoContaDestino.setDataHora(new Date());
+		transacaoContaDestino.setDescricao("Transferencia " + this.getNumeroConta());
+		transacaoContaDestino.setValor(valor);
+		contaDestino.depositoTransferencia(transacaoContaDestino);
+	}
 	
 }
