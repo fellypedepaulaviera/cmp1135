@@ -104,7 +104,7 @@ public class Conta {
 		transacaoContaOrigem.setDataHora(new Date());
 		transacaoContaOrigem.setDescricao("Transferencia " + contaDestino.getNumeroConta());
 		transacaoContaOrigem.setValor(-valor);
-		transacoes.add(transacaoContaOrigem);
+		this.depositoTransferencia(transacaoContaOrigem);
 		// Registra transacao na conta destino
 		Transacao transacaoContaDestino = new Transacao();
 		transacaoContaDestino.setDataHora(new Date());
