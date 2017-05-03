@@ -1,4 +1,4 @@
-package exemplos;
+package exemplos.classes;
 
 public class Sapo extends Animal {
 	public Sapo(int idade) {

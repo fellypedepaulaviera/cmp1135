@@ -1,5 +1,10 @@
 package exemplos.banco;
 
+import exemplos.classes.Agencia;
+import exemplos.classes.Banco;
+import exemplos.classes.Cliente;
+import exemplos.classes.Conta;
+
 public class TesteBanco {
 	
 	public static void main(String... args) {

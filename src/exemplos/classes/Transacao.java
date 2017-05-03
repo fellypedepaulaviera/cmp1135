@@ -1,4 +1,4 @@
-package exemplos.banco;
+package exemplos.classes;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;

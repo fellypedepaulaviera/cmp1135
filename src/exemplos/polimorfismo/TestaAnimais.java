@@ -1,4 +1,9 @@
-package exemplos;
+package exemplos.polimorfismo;
+
+import exemplos.classes.Animal;
+import exemplos.classes.Boi;
+import exemplos.classes.Cachorro;
+import exemplos.classes.Sapo;
 
 public class TestaAnimais {
 	static public void main(String... args) {

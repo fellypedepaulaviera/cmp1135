@@ -1,4 +1,4 @@
-package exemplos.banco;
+package exemplos.classes;
 
 import java.util.ArrayList;
 

@@ -1,22 +1,12 @@
-/**
- * 
- */
 package exemplos;
 
-/**
- * @author Heider
- *
- */
 public class Testes {
 
 	public static void main(String[] args) {
-		int a = 0;
-		int b = 0;
-		for(int c=0;c<=10;c++) {
-			System.out.println("a = " + (a++));
-			System.out.println("b = " + (++b));
-			System.out.println("----------");
-		}
+		int bitmask = 0x000F;
+		int val = 0x2222;
+		// prints "2"
+		System.out.println(val & bitmask);
 	}
-	
+
 }

@@ -1,4 +1,4 @@
-package exemplos;
+package exemplos.polimorfismo;
 
 import exemplos.classes.Bicicleta;
 import exemplos.classes.MountainBike;

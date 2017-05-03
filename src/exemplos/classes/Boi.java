@@ -1,4 +1,4 @@
-package exemplos;
+package exemplos.classes;
 
 public class Boi extends Animal {
 	/*
