@@ -1,7 +1,7 @@
 /**
  * Exercicio 02.
  */
-package exemplos.primeiralista;
+package exercicios.primeiralista;
 
 public class Sapo extends Animal {
 	

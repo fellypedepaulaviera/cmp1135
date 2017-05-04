@@ -1,6 +1,6 @@
-package exemplos.segundalista;
+package exercicios.segundalista;
 
-import exemplos.primeiralista.Animal;
+import exercicios.primeiralista.Animal;
 
 public class ExibeSomAnimal implements Operacao {
 

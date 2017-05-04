@@ -5,7 +5,7 @@ import exemplos.classes.Boi;
 import exemplos.classes.Cachorro;
 import exemplos.classes.Sapo;
 
-public class TestaAnimais {
+public class Animais {
 	static public void main(String... args) {
 		Animal[] animais = new Animal[3];
 		animais[0] = new Sapo(2,1,"Pururu");

@@ -1,7 +1,7 @@
 /**
  * Exercicio 05.
  */
-package exemplos.primeiralista;
+package exercicios.primeiralista;
 
 import java.util.ArrayList;
 

@@ -1,7 +1,7 @@
 /**
  * Exercicio 04.
  */
-package exemplos.primeiralista;
+package exercicios.primeiralista;
 
 public class Boi extends Animal {
 	

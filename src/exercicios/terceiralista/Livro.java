@@ -1,4 +1,4 @@
-package exemplos.terceiralista;
+package exercicios.terceiralista;
 
 /**
  * Exercicio 01.

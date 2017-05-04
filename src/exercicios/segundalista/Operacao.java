@@ -1,4 +1,4 @@
-package exemplos.segundalista;
+package exercicios.segundalista;
 
 public interface Operacao {
 	void executa(Object obj);

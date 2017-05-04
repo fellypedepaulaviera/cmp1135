@@ -1,7 +1,7 @@
 /**
  * Exercicio 03.
  */
-package exemplos.primeiralista;
+package exercicios.primeiralista;
 
 public class Cachorro extends Animal {
 	

@@ -1,14 +1,14 @@
 /**
  * Exercicio 01.
  */
-package exemplos.segundalista;
+package exercicios.segundalista;
 
 import java.util.ArrayList;
 
-import exemplos.primeiralista.Animal;
-import exemplos.primeiralista.Boi;
-import exemplos.primeiralista.Cachorro;
-import exemplos.primeiralista.Sapo;
+import exercicios.primeiralista.Animal;
+import exercicios.primeiralista.Boi;
+import exercicios.primeiralista.Cachorro;
+import exercicios.primeiralista.Sapo;
 
 
 public class TestaAnimais {

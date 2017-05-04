@@ -1,7 +1,7 @@
 /**
  * Exercicio 01.
  */
-package exemplos.primeiralista;
+package exercicios.primeiralista;
 
 public class Animal {
 	

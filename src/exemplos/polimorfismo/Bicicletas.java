@@ -3,7 +3,7 @@ package exemplos.polimorfismo;
 import exemplos.classes.Bicicleta;
 import exemplos.classes.MountainBike;
 
-class BicicletaDemo {
+class Bicicletas {
 	public static void main(String[] args) {
 		// Cria dois objetos do tipo Bicicleta diferentes
 		Bicicleta bike1 = new Bicicleta();
