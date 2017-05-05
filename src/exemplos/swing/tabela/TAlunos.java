@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import javax.swing.table.AbstractTableModel;
 
-import exemplos.swing.entidade.EAluno;
+import exemplos.entidade.EAluno;
 
 public class TAlunos extends AbstractTableModel {
 

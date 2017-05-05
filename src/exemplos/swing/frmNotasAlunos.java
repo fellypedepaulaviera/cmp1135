@@ -10,11 +10,12 @@ import java.awt.event.KeyEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-import exemplos.swing.entidade.EAluno;
+import exemplos.entidade.EAluno;
 
 public class frmNotasAlunos extends JFrame {
 
@@ -28,6 +29,7 @@ public class frmNotasAlunos extends JFrame {
 	private TextField txfN1;
 	private TextField txfN2;
 	private JLabel lblResposta;
+	private static frmNotasAlunos frame;
 
 	/**
 	 * Launch the application.
@@ -36,7 +38,7 @@ public class frmNotasAlunos extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					frmNotasAlunos frame = new frmNotasAlunos();
+					frame = new frmNotasAlunos();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -68,10 +70,17 @@ public class frmNotasAlunos extends JFrame {
 				String nome = txfNome.getText();
 				double n1 = Double.valueOf(txfN1.getText());
 				double n2 = Double.valueOf(txfN2.getText());
-				EAluno eAluno = new EAluno(nome,n1,n2);
+				EAluno eAluno = new EAluno(1,nome,n1,n2);
 				System.out.println(eAluno.toString());
+				
+				//custom title, warning icon
+				JOptionPane.showMessageDialog(frame,
+				    eAluno.toString(),
+				    "Resultado",
+				    JOptionPane.WARNING_MESSAGE);
 			}
 		});
+		
 		btnBoto.setBounds(335, 227, 89, 23);
 		contentPane.add(btnBoto);
 
